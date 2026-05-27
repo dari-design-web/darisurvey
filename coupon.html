@@ -49,8 +49,8 @@ function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
         </div>
       </div>
       <a href="index.html" class="mt-6 block text-center text-sm text-slate-500">返回首頁</a>`;
-    QRCode.toCanvas(coupon.qr_code_value || coupon.coupon_code, { width: 240, margin: 1 }, (err, canvas) => {
-      if (!err) document.getElementById('qrBox').appendChild(canvas);
+    const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=' + encodeURIComponent(coupon.qr_code_value || coupon.coupon_code);
+    document.getElementById('qrBox').innerHTML = '<img src="' + qrUrl + '" alt="QR Code" width="240" height="240">';
     });
   } catch (e) {
     root.innerHTML = `<div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center"><h1 class="text-xl font-bold text-red-700">查無此兌換券</h1><p class="text-sm text-red-600 mt-2">${esc(e.message)}</p></div><a href="index.html" class="mt-6 block text-center text-sm text-slate-500">返回首頁</a>`;
