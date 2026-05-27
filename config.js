@@ -1,6 +1,6 @@
 // ⚠️ 上線前請改為您的 Replit API 網址（含 https://，結尾無 /）
 // 範例：window.API_BASE = "https://satisfaction-survey-api.您的帳號.repl.co";
-window.API_BASE = "https://5d68e285-fc9b-4e99-b466-501f74ee255d-00-2d7fisg5pj5tj.pike.replit.dev";
+window.API_BASE = "https://survey-backend-0klk.onrender.com";
 
 // 兌換券前端公開檢視頁路徑（QR Code 內含的網址會指向這裡）
 // 若您改 GitHub Pages 為 https://yourname.github.io/satisfaction-survey/，
